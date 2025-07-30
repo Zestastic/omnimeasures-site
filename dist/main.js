@@ -21,6 +21,6 @@ function convertVolume(value, fromUnit, toUnit) {
     if (fromUnit === toUnit) {
         return value;
     } else {
-        return value * conversions[fromUnit][toUnit];
+        return (value * conversions[fromUnit][toUnit]).toFixed(4);
     }
 }
