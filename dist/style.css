@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8 0%, #89e0cf 50%, #4caf50 100%);
 }
 
 header {
