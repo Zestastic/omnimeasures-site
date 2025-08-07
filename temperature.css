@@ -1,0 +1,74 @@
+/* Temperature Converter Styles */
+#temperature-converter {
+  background: linear-gradient(111deg, #ffffffc8 80%, #baffd8a1 100%);
+  border-radius: 1.3rem;
+  box-shadow: 0 6px 28px 0 #95faee42, 0 2px 7px 0 #13be7a17;
+  border: 2px solid #e0ffe8;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  backdrop-filter: blur(2px) saturate(1.23);
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 2.5rem auto;
+}
+
+#temperature-converter h2 {
+  background: linear-gradient(90deg, #0dd98d 25%, #22719e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 1.3rem;
+  font-size: 1.6rem;
+}
+
+#temperature-converter label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #219150;
+  font-weight: 500;
+}
+
+#temperature-converter input[type="number"],
+#temperature-converter select {
+  width: 100%;
+  padding: 0.65rem;
+  font-size: 1.05rem;
+  border: 1px solid #96e6a1;
+  border-radius: 7px;
+  margin-bottom: 0.6rem;
+  background: #f4ffe8;
+}
+
+#temperature-converter button[type="submit"] {
+  display: block;
+  width: 100%;
+  background: linear-gradient(94deg, #39e8b6 20%, #14b87e 90%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.18rem;
+  padding: 0.7rem 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #13be7a29;
+  transition: background 0.2s;
+}
+
+#temperature-converter button[type="submit"]:hover {
+  background: linear-gradient(90deg, #11c986 8%, #45ffd6 98%);
+}
+
+#temperature-result {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #176c3c;
+  font-size: 1.07rem;
+  letter-spacing: 0.07em;
+  background: #e4ffe8;
+  border-radius: 5px;
+  padding: 0.45rem 0;
+}
