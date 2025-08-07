@@ -47,9 +47,11 @@ main {
   overflow: hidden !important;
   left: 0 !important;
 }
+
 .parallax-banner-secondary {
   background-image: linear-gradient(to top, #226099cc 2%, #21b69e7d 80%, #0005 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') !important;
 }
+
 .parallax-banner-content {
   color: #fff !important;
   text-align: center !important;
@@ -62,6 +64,7 @@ main {
   border-radius: 27px !important;
   margin: 0 2vw !important;
 }
+
 .parallax-banner-content h2 {
   font-size: 2rem !important;
   font-weight: 800 !important;
@@ -69,6 +72,7 @@ main {
   letter-spacing: 1.5px !important;
   color: white !important;
 }
+
 .parallax-banner-content p {
   font-size: 1.05rem !important;
   font-weight: 400 !important;
@@ -85,14 +89,87 @@ main {
   padding: 0 !important;
   margin: 0 !important;
 }
+
 .wrapper-center main {
   max-width: none !important;
   width: 100vw !important;
 }
 
 @media (max-width: 700px) {
-  .centered-row { margin: 1.3rem 0 !important; }
-  .parallax-banner, .parallax-banner-secondary {min-height: 80px !important;}
-  .parallax-banner-content h2 { font-size: 1.1rem !important;}
-  .parallax-banner-content { border-radius: 13px !important; padding: 0.7em 0.4em !important;}
+}
+
+/* Add glowing effect to buttons */
+.hero-content button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-content button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent 60%);
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.4s, transform 0.5s ease-out;
+  z-index: -1;
+}
+
+.hero-content button:hover::before {
+  opacity: 0.7;
+  transform: scale(1.5);
+}
+
+/* Footer Refinements */
+footer {
+  text-align: center;
+  color: #176c3c;
+  border-top: 1.5px solid #cef2e0;
+  padding: 2.1rem 0 0.8rem 0;
+  font-size: 0.97rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #eaffed 65%, #bbffe6 94%);
+  box-shadow: 0 -6px 22px #baffd838;
+}
+
+.footer-links {
+  margin-bottom: 0.1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer-links a {
+  color: #219150;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #176c3c;
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.footer-social svg {
+  width: 22px;
+  height: 22px;
+  fill: #219150;
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.footer-social svg:hover {
+  fill: #176c3c;
+  transform: scale(1.2);
 }
