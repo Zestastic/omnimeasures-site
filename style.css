@@ -2,100 +2,124 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f0f4f8 0%, #89e0cf 50%, #4caf50 100%);
+    /* The vibrant green gradient stays! */
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #219150;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 main {
-    padding: 2rem 0.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     align-items: flex-start;
+    padding: 2rem 1rem;
 }
 
 .calculator-card {
-    max-width: 400px;
-    min-width: 280px;
     background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 2px 12px 0 rgba(90,79,120,.10);
-    padding: 1.5rem 1.25rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 6px 28px 0 rgba(50,90,50,.14);
+    max-width: 340px;
+    min-width: 270px;
+    width: 100%;
     margin: 0.5rem;
+    padding: 1.5rem 1.25rem 1.2rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    transition: box-shadow 0.15s;
 }
 
 .calculator-card h2 {
     text-align: center;
+    color: #219150;
     font-size: 1.25rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.3rem;
     font-weight: 700;
-    color: #218878;
+    letter-spacing: 0.5px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
-input[type="number"], input[type="date"], select {
-    padding: 0.6rem;
+label {
     font-size: 1rem;
-    border: 1px solid #cdefff;
-    border-radius: 6px;
-    margin-bottom: 0.3rem;
+    color: #219150;
+    font-weight: 500;
+    margin-bottom: -0.2rem;
+}
+
+input[type="number"], input[type="date"], select {
+    padding: 0.65rem;
+    font-size: 1.05rem;
+    border: 1px solid #96e6a1;
+    border-radius: 7px;
+    margin-bottom: 0.25rem;
+    background: #f4ffe8;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border: 1.5px solid #219150;
+    outline: none;
+    background: #f6fff2;
 }
 
 button {
-    background: #218878;
+    background: #219150;
     color: #fff;
     border: none;
-    padding: 0.6rem;
-    border-radius: 6px;
-    font-size: 1.08rem;
-    cursor: pointer;
-    margin-top: 0.5rem;
+    border-radius: 8px;
+    font-size: 1.12rem;
     font-weight: 600;
-    transition: background 0.2s;
+    padding: 0.7rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    transition: background 0.15s;
 }
 button:hover, button:focus {
-    background: #156e5e;
+    background: #176c3c;
 }
 
 .result, #volume-result, #weight-result, #age-result {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #156e5e;
+    color: #176c3c;
+    font-size: 1.07rem;
+    letter-spacing: 0.07em;
+    background: #e4ffe8;
+    border-radius: 5px;
+    padding: 0.45rem 0;
 }
-.age-calculator label,
-#weight-converter label,
-#volume-converter label {
-    margin-bottom: -0.3rem;
-    font-weight: 500;
-}
+::-webkit-input-placeholder { color: #89a491; }
+::-moz-placeholder { color: #89a491; }
+:-ms-input-placeholder { color: #89a491; }
+::placeholder { color: #89a491; }
+
 @media (max-width: 900px) {
     main {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-        padding: 1rem 0.3rem;
+        gap: 1.7rem;
+        padding: 1.2rem 0.2rem;
     }
     .calculator-card {
-        width: 95%;
+        width: 100%;
+        max-width: 98vw;
     }
 }
