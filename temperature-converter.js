@@ -114,3 +114,5 @@ temperatureForm.addEventListener('submit', (event) => {
   const result = convertTemperature(value, fromUnit, toUnit);
   resultParagraph.textContent = `Result: ${result} ${toUnit}`;
 });
+
+console.log('Temperature Converter script loaded successfully');
