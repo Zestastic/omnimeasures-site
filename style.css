@@ -1,19 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* The vibrant green gradient stays! */
-    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    background: linear-gradient(135deg, #e8ffd7 0%, #a6e6b8 100%);
     box-sizing: border-box;
+    color: #143528;
 }
 
 header {
-    background-color: #219150;
+    background: rgba(47, 167, 108, 0.96);
     color: white;
-    padding: 1.5rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     text-align: center;
     letter-spacing: 1px;
+    border-bottom: 4px solid #6ee7b7;
+}
+
+.site-title {
+    font-size: 2.2rem;
+    margin: 0 0 0.3rem 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.site-tagline {
+    font-size: 1.08rem;
+    font-weight: 400;
+    margin-bottom: 1.1rem;
+    color: #eaffee;
+    text-shadow: 0 1px 5px #257c4d66;
+}
+
+.about-section {
+    max-width: 650px;
+    margin: 2.2rem auto 2.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 1.3rem;
+    padding: 1.4rem 1.3rem 1.2rem 1.3rem;
+    box-shadow: 0 4px 18px 0 rgba(50,90,50,.09);
+}
+.about-section h3 {
+    font-size: 1.2rem;
+    color: #219150;
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+}
+.about-icons {
+    display: flex;
+    gap: 1.35rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0.9rem 0 0.3rem 0;
+    flex-wrap: wrap;
+}
+.about-icon {
+    width: 50px; height: 50px;
+    border-radius: 12px;
+    background: #e8ffd7;
+    box-shadow: 0 2px 10px 0 rgba(50,90,50,.06);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.about-section p {
+    color: #25694d;
+    font-size: 1.04rem;
 }
 
 main {
@@ -28,16 +81,20 @@ main {
 .calculator-card {
     background: #fff;
     border-radius: 1.2rem;
-    box-shadow: 0 6px 28px 0 rgba(50,90,50,.14);
+    box-shadow: 0 6px 28px 0 rgba(50,90,50,.13);
     max-width: 340px;
     min-width: 270px;
     width: 100%;
     margin: 0.5rem;
-    padding: 1.5rem 1.25rem 1.2rem 1.25rem;
+    padding: 1.37rem 1.25rem 1.15rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    transition: box-shadow 0.15s;
+    transition: box-shadow 0.15s, transform 0.14s;
+}
+.calculator-card:hover {
+    box-shadow: 0 12px 40px 0 rgba(47,167,108,0.13);
+    transform: translateY(-2px) scale(1.013);
 }
 
 .calculator-card h2 {
@@ -111,6 +168,23 @@ button:hover, button:focus {
 :-ms-input-placeholder { color: #89a491; }
 ::placeholder { color: #89a491; }
 
+footer {
+    text-align: center;
+    color: #176c3c;
+    border-top: 1.5px solid #cef2e0;
+    margin-top: 3.5rem;
+    padding: 1.5rem 0 0.7rem 0;
+    font-size: 0.98rem;
+    background: #eaffed;
+    letter-spacing: 0.5px;
+}
+footer a {
+    color: #219150;
+    text-decoration: none;
+    margin: 0 0.35rem;
+}
+footer a:hover { text-decoration: underline; }
+
 @media (max-width: 900px) {
     main {
         flex-direction: column;
@@ -118,8 +192,12 @@ button:hover, button:focus {
         gap: 1.7rem;
         padding: 1.2rem 0.2rem;
     }
+    .about-section {
+        margin: 1.8rem 0 2rem 0;
+        border-radius: 1.05rem;
+    }
     .calculator-card {
         width: 100%;
-        max-width: 98vw;
+        max-width: 99vw;
     }
 }

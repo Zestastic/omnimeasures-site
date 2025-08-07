@@ -8,8 +8,22 @@
 </head>
 <body>
     <header>
-        <h1>OmniMeasures Unit Conversion</h1>
+        <div class="site-title">OmniMeasures</div>
+        <div class="site-tagline">Your all-in-one, instant unit/conversion hub—for everything you measure and plan.</div>
     </header>
+    <section class="about-section">
+        <h3>Welcome to OmniMeasures!</h3>
+        <div class="about-icons">
+            <div class="about-icon">🔄</div>
+            <div class="about-icon">⏳</div>
+            <div class="about-icon">🌎</div>
+        </div>
+        <p>
+            Convert volumes, weights, ages, and more in a click.<br>
+            All tools are offline-ready, mobile-perfect, and refresh in real time.<br>
+            Just enter your values below and see results instantly!
+        </p>
+        </section>
     <main>
         <section id="volume-converter" class="calculator-card">
             <h2>Volume Converter</h2>
@@ -65,6 +79,55 @@
         </section>
         <section id="age-calculator-section" class="calculator-card">
             <!-- Age Calculator will render here -->
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 OmniMeasures &mdash; <a href="#">About</a> | <a href="#">Contact</a>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="./volume-converter.js"></script>
+    <script src="./weight-converter.js"></script>
+    <script type="module">
+      import { renderAgeCalculator } from './age-calculator.js';
+      const container = document.getElementById('age-calculator-section');
+      if (container) renderAgeCalculator(container);
+    </script>
+</body>
+</html>
+                </select>
+
+                <button type="submit">Convert</button>
+            </form>
+
+            <p id="volume-result">Result: --</p>
+        </section>
+
+
+        <section id="weight-converter" class="calculator-card">
+            <h2>Weight Converter</h2>
+            <form id="weight-form">
+                <label for="weight-value">Enter value:</label>
+                <input type="number" id="weight-value" required>
+
+                <label for="weight-unit-from">Convert from:</label>
+                <select id="weight-unit-from">
+                    <option value="kilograms">Kilograms</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="grams">Grams</option>
+                    <option value="ounces">Ounces</option>
+                </select>
+
+                <label for="weight-unit-to">Convert to:</label>
+                <select id="weight-unit-to">
+                    <option value="kilograms">Kilograms</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="grams">Grams</option>
+                    <option value="ounces">Ounces</option>
+                </select>
+
+                <button type="submit">Convert</button>
+            </form>
+            <p id="weight-result">Result: --</p>
         </section>
     </main>
     <script src="./main.js"></script>
