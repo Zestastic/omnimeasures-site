@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> OmniMeasures Unit Conversion Hub</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./age-calculator.css">
 </head>
 <body>
     <header>
@@ -37,7 +38,6 @@
             </form>
             <p id="volume-result">Result: --</p>
         </section>
-        <!-- New Weight Converter Section -->
         <section id="weight-converter">
             <h2>Weight Converter</h2>
             <form id="weight-form">
@@ -64,9 +64,17 @@
             </form>
             <p id="weight-result">Result: --</p>
         </section>
+        <section id="age-calculator-section">
+            <!-- Age Calculator will render here -->
+        </section>
     </main>
     <script src="./main.js"></script>
     <script src="./volume-converter.js"></script>
     <script src="./weight-converter.js"></script>
+    <script type="module">
+      import { renderAgeCalculator } from './age-calculator.js';
+      const container = document.getElementById('age-calculator-section');
+      if (container) renderAgeCalculator(container);
+    </script>
 </body>
 </html>
